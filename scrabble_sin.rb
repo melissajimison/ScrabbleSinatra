@@ -13,5 +13,12 @@ class Scrabble < Sinatra::Base
     erb :score
   end
 
+  post '/score' do
+    params
+    # params = [word,melissa]
+    erb :score
+
+  end
+
   run!
 end
