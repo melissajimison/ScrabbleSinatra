@@ -2,13 +2,16 @@
   <label for="user_word">Please enter your words separed by space</label>
   <input type="text" name="words" value="" id="user_word">
 
+
   <input type="submit" value="Score!">
 </form>
 
 
 <% if @multiple_scores %>
-<% @multiple_scores.each do |pairs| %>
-<h1> <%= pairs[0] %> is the score for the word '<%= pairs[1] %>' </h1>
-<% end %>
-
+  <% @multiple_scores.each do |pairs| %>
+  <h1> <%= pairs[0] %> is the score for the word '<%= pairs[1] %>' </h1>
+    <% if @by_letter_many %>
+    <h1>ay !!<%= @by_letter_many[pairs[1]] %> more ayayayay!</h1>
+    <% end %>
+  <% end %>
 <% end %>

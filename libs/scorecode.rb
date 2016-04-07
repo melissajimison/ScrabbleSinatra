@@ -12,11 +12,27 @@ class Scoring
     end
 
     word = word.upcase.split(//) # change letters of word to uppercase to match keys
+    # => [M,E,L,I,S,S,A]
     score = word.map { |letter| SCORES[letter.to_sym] }
 
     word.zip score
     # =>[["M", 3], ["E", 1], ["L", 1], ["I", 1], ["S", 1], ["S", 1], ["A", 1]]
   end
+
+  def self.letter_by_letter_many(array_of_words)
+    # ["melissa", "david",  "cris"]
+    final = {}
+    points = array_of_words.map do |one_word|
+      final[one_word] = self.letter_by_letter(one_word)
+    end
+
+    return final
+  # => {
+      # "meli"=>[["M", 3], ["E", 1], ["L", 1], ["I", 1]],
+      # "dav"=>[["D", 2], ["A", 1], ["V", 4]]
+    # }
+  end
+
 
   def self.score(word)
     if word.length > 7

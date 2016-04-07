@@ -26,7 +26,7 @@ class Scrabble < Sinatra::Base
 
   post '/score_many' do
     @multiple_scores = Scoring.score_many(params["words"].split)
-    @by_letter = Scoring.letter_by_letter(params["word"])
+    @by_letter_many = Scoring.letter_by_letter_many(params["words"].split)
     erb :score_many
   end
 
