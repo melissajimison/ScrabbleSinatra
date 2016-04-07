@@ -3,9 +3,19 @@
   <label for="user_word">Your Word</label>
   <input type="text" name="word" value="" id="user_word">
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Score!">
 </form>
 
 <% if @points %>
 <h1> The score fo the word '<%= params["word"] %>' is <%= @points %> points!!  </h1>
+<% end %>
+
+<% if @by_letter %>
+<% @by_letter.each do |pair| %>
+<h3> Points for <%= pair[0] %> = <%= pair[1] %> !!  </h3>
+<% end %>
+
+
+<!-- <%= erb :points %> -->
+
 <% end %>

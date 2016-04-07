@@ -6,11 +6,22 @@ class Scoring
     Q: 10, Z: 10
   }
 
+  def self.letter_by_letter(word)
+    if word.length > 7
+      raise ArgumentError.new
+    end
+
+    word = word.upcase.split(//) # change letters of word to uppercase to match keys
+    score = word.map { |letter| SCORES[letter.to_sym] }
+
+    word.zip score
+    # =>[["M", 3], ["E", 1], ["L", 1], ["I", 1], ["S", 1], ["S", 1], ["A", 1]]
+  end
 
   def self.score(word)
     if word.length > 7
-        raise ArgumentError.new
-      end
+      raise ArgumentError.new
+    end
 
     word = word.upcase.split(//) # change letters of word to uppercase to match keys
     points = 0  # points start at 0
@@ -28,7 +39,7 @@ class Scoring
     all_scores = array_of_words.map { |one_word| self.score(one_word) }
     # => all_scores = [59, 59, 4, 6]
 
-    @pairs = all_scores.zip(array_of_words)
+    all_scores.zip(array_of_words)
     # example: [[59, "pull"], [43, "cat"], [59, "yes"], [3, "andrea"], [7, "carlos"]]
   end
 end

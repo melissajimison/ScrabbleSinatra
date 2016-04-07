@@ -17,6 +17,7 @@ class Scrabble < Sinatra::Base
     @points = Scoring.score(params["word"])
     # params
     # params = [word,melissa]
+    @by_letter = Scoring.letter_by_letter(params["word"])
     erb :score
 
   end
