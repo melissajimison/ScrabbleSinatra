@@ -1,5 +1,5 @@
 require 'sinatra'
-# require_relative 'libs/peep'
+require_relative 'libs/scorecode'
 
 class Scrabble < Sinatra::Base
   # register Sinatra::Reloader
@@ -14,7 +14,8 @@ class Scrabble < Sinatra::Base
   end
 
   post '/score' do
-    params
+    @points = Scoring.score(params["word"])
+    # params
     # params = [word,melissa]
     erb :score
 
