@@ -21,5 +21,15 @@ class Scrabble < Sinatra::Base
 
   end
 
+  get '/score_many' do
+    erb :score_many
+  end
+
+  post '/score_many' do
+    @multiple_scores = Scoring.score_many(params["words"].split)
+    # params
+    erb :score_many
+  end
+
   run!
 end

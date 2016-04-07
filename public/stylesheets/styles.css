@@ -149,22 +149,16 @@ copy-rights {
 form {
   border: solid red;
   text-align: center;
-  /*font-size: 36px;*/
   overflow: auto;
 }
 
 label {
-  border: solid blue;
   font-size: 36px;
   font-family: 'Noticia Text',serif;
-
 }
 
 input {
-  border: solid green;
-  /*height: 40px;*/
   font-size: 36px;
-
 }
 
 /*********************END****************/
