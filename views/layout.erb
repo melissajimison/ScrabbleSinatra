@@ -8,42 +8,30 @@
 </head>
 <body class="home">
 
-  <nav>
-    <ul>
-      <a class="logo" href="index">Fun Scrabble</a>
-      <li><a href="index">Home</a></li>
-      <li><a href="score">Score one word</a></li>
-      <li><a href="score_many">multiple words</a></li>
-    </ul>
-  </nav>
+  <header>
 
-  <div class="index-container">
+    <nav>
+      <ul>
+        <a class="logo" href="/">Fun Scrabble</a>
+        <li><a href="/">Home</a></li>
+        <li><a href="score">Score one word</a></li>
+        <li><a href="score_many">multiple words</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
 
 
     <%= yield %>
 
 
-  </div>
+  </main>
 
-  <footer class="footer-index">
-
-    <figure class="social-media-box">
-      <a href="https://www.facebook.com/MelissaJimison"> <img class="social-media" src="images/facebook-logo.jpg" alt="Facebook logo" target="_blank">
-      </a>
-
-      <a href="https://twitter.com/melissajimison"> <img class="social-media" src="images/twitter-logo.jpg" alt="Twitter logo" target="_blank">
-      </a>
-
-      <a href="https://instagram.com/melissajimison"> <img class="social-media" src="images/instagram-logo.jpg" alt="Instagram logo" target="_blank">
-      </a>
-
-      <a href="hhttps://co.linkedin.com/in/melijimison"> <img class="social-media" src="images/linkedin-logo.jpg" alt="Linkedin logo" target="_blank">
-      </a>
-
-    </figure>
-    <copy-rights>
+  <footer>
+    <small>
       &copy; 2016 Copyright, Melissa Jimison - All rights reserved.
-  </copy-rights>
-</footer>
+    </small>
+  </footer>
 </body>
 </html>

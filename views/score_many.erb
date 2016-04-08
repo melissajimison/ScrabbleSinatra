@@ -1,3 +1,5 @@
+<article class="mainmain">
+
 <form action="" method="post" accept-charset="utf-8">
   <label for="user_word">Please enter your words separed by space</label>
   <input type="text" name="words" value="" id="user_word">
@@ -8,12 +10,16 @@
 
 
 <% if @multiple_scores %>
+<ul class="mess">
   <% @multiple_scores.each do |pairs| %>
-  <h1> <%= pairs[0] %> is the score for the word '<%= pairs[1] %>' </h1>
+  <li><h1> '<%= pairs[1] %>' = <%= pairs[0] %> points!! </h1>
     <% if @by_letter_many %>
       <% @by_letter_many[pairs[1]].each do |pair| %>
-      <h1>Points for <%= pair[0] %> is <%= pair[1] %> </h1>
+      <h3><%= pair[0] %> = <%= pair[1] %> </h3>
     <% end %>
     <% end %>
+    </li>
   <% end %>
+</ul>
 <% end %>
+</article>

@@ -1,3 +1,5 @@
+<article class="mainmain">
+
 
 <form action="" method="post" accept-charset="utf-8">
   <label for="user_word">Your Word</label>
@@ -7,8 +9,9 @@
 </form>
 
 <% if @points %>
-<h1> The score fo the word '<%= params["word"] %>' is <%= @points %> points!!  </h1>
+<h1> '<%= params["word"] %>' = <%= @points %> points!!  </h1>
 <% if @by_letter %>
 <%= erb :points %>
 <% end %>
 <% end %>
+</article>
