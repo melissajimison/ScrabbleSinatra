@@ -11,7 +11,9 @@
   <% @multiple_scores.each do |pairs| %>
   <h1> <%= pairs[0] %> is the score for the word '<%= pairs[1] %>' </h1>
     <% if @by_letter_many %>
-    <h1>ay !!<%= @by_letter_many[pairs[1]] %> more ayayayay!</h1>
+      <% @by_letter_many[pairs[1]].each do |pair| %>
+      <h1>Points for <%= pair[0] %> is <%= pair[1] %> </h1>
+    <% end %>
     <% end %>
   <% end %>
 <% end %>

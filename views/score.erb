@@ -8,8 +8,7 @@
 
 <% if @points %>
 <h1> The score fo the word '<%= params["word"] %>' is <%= @points %> points!!  </h1>
-<% end %>
-
 <% if @by_letter %>
 <%= erb :points %>
+<% end %>
 <% end %>
