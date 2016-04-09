@@ -4,7 +4,7 @@
     <label for="user_word">Please enter your words separed by a whitespace </label>
     <input type="text" name="words" value="" id="user_word">
     <br>
-    <label class="radio"><input type="radio" name="scoreweight" value="bonus">With bonus</label>
+    <label class="radio"><input type="radio" name="scoreweight" value="bonus" required>With bonus</label>
     <label class="radio"><input type="radio" name="scoreweight" value="no-bonus">Plain word</label>
 
     <input type="submit" value="Score!">
@@ -23,11 +23,12 @@
 
     <ul class="mess">
       <% @multiple_scores.each do |pairs| %>
-      <li><h1> '<%= pairs[1] %>' = <%= pairs[0] %> points!! </h1>
+      <li>
+
+      <h1> '<%= pairs[1] %>' = <%= pairs[0] %> points!! </h1>
         <% if @by_letter_many %>
-        <% @by_letter_many[pairs[1]].each do |pair| %>
-        <h3><%= pair[0] %> = <%= pair[1] %> </h3>
-        <% end %>
+        <% @by_letter = @by_letter_many[pairs[1]] %>
+          <%= erb :points %>
         <% end %>
       </li>
       <% end %>

@@ -30,11 +30,10 @@ header {
 
 nav ul {
   list-style: none;
-  /*opacity: 0.8;*/
   text-align: right;
   padding: 0;
   margin: 0;
-  /*overflow: auto;*/
+  overflow: auto;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -73,8 +72,7 @@ nav a.active {
   cursor: default;
 }
 
-
-h1, h3 {
+.score, .equal, h1, h3 {
   font-family: 'Shadows Into Light', cursive;
   text-align: center;
 }
@@ -89,9 +87,6 @@ h3{
 }
 
 .mainmain {
-  /*margin-top: 13vw;*/
-  /*margin-bottom: 3vh;*/
-  /*display: inline;*/
   width: 100%;
   padding: 0;
   padding-top: 2.5rem;
@@ -99,7 +94,6 @@ h3{
   height: 86.5vh;
   float: right;
   overflow: auto;
-
 }
 /*********************END****************/
 
@@ -113,7 +107,7 @@ form {
 
 label {
   font-size: 36px;
-  font-family: 'Noticia Text',serif;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 input {
@@ -128,21 +122,53 @@ input {
   border-radius: 5%;
   margin-right: .5rem;
 }
-/*41F3F7*/
+
 ul.mess {
-  overflow: auto;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-left: 10%;
+  padding-right: auto;
+}
+
+.cont {
+  text-align: center;
 }
 
 .mess > li {
   display: inline-block;
+  overflow: auto;
   width: 350px;
-  height: 533px;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+  height: 583px;
+  position: relative;
 }
+
+.line {
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  list-style: none;
+}
+
+.tile, .equal, .score { float: left;
+  position: relative;
+  width: 58px;
+  height: 58px;
+}
+
+.tile {
+  padding: 1rem;
+  background-image: url("/images/tile2.jpg");
+  border-radius: 25%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: 1.6rem;
+
+}
+
+.score, .equal {
+  font-size: 2rem;
+}
+
 
 /*********************END****************/
 
@@ -150,14 +176,13 @@ ul.mess {
 footer {
   background-color: #2DA8AB;
   width: 100%;
-  margin-bottom: 0;
-  bottom: 0;
+  /*margin-bottom: 0;*/
+  /*bottom: 0;*/
   height: 5.5vh;
   position: relative;
   float: right;
-  overflow: auto;
-  clear: both;
-  text-align: center;
+  /*overflow: auto;*/
+  /*clear: both;*/
 }
 
 small {

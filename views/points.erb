@@ -1,3 +1,7 @@
 <% @by_letter.each do |pair| %>
-<h3> Points for <%= pair[0] %> = <%= pair[1] %> !!  </h3>
+<ul class="line">
+  <li class="tile"> <%= pair[0] %> </li>
+  <li class="equal"> = </li>
+  <li class="score"><%= pair[1] %> </li>
+</ul>
 <% end %>

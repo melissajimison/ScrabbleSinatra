@@ -14,8 +14,12 @@ class Scrabble < Sinatra::Base
   end
 
   post '/score' do
+    if  params["word"][/\d+/] == nil
     @points = Scoring.score(params["word"])
     @by_letter = Scoring.letter_by_letter(params["word"])
+    else
+      "nothing hapend"
+    end
     erb :score
   end
 

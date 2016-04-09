@@ -9,14 +9,20 @@
 </form>
 
 
-
 <% if @points %>
-<h1> '<%= params["word"] %>' = <%= @points %> points!!  </h1>
-<% if @by_letter %>
-<%= erb :points %>
+  <div class="cont">
+
+    <h1> '<%= params["word"] %>' = <%= @points %> points!!  </h1>
+    <% if @by_letter %>
+      <%= erb :points %>
+    <% end %>
+
+    <% if params["word"].length == 7 %>
+      <h1>  <%= BONUS %> BONUS for 7 letters word total points <%= @points + BONUS %> </h1>
+    <% end %>
+
+  </div>
 <% end %>
-<% if params["word"].length == 7 %>
-<h1>  <%= BONUS %> BONUS for 7 letters word total points <%= @points + BONUS %> </h1>
-<% end %>
-<% end %>
+
+
 </article>
