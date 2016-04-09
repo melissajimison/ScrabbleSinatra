@@ -18,7 +18,6 @@ body {
 
 header {
   width: 100%;
-  border: solid yellow;
   padding: 0;
   margin: 0;
   overflow: auto;
@@ -41,7 +40,6 @@ nav ul {
 }
 
 nav li {
-  border: solid red;
   font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
   display: inline-block;
@@ -58,7 +56,6 @@ nav li {
   float: left;
   margin: 0;
   height: 8vh;
-  border: solid green;
 }
 
 nav a {
@@ -99,7 +96,6 @@ h3{
   padding: 0;
   padding-top: 2.5rem;
   position: relative;
-  border: solid blue;
   height: 86.5vh;
   float: right;
   overflow: auto;
@@ -111,8 +107,8 @@ h3{
 form {
   text-align: center;
   overflow: auto;
-  border: solid white;
   margin-bottom: 1.6rem;
+  line-height: 5rem;
 }
 
 label {
@@ -121,29 +117,24 @@ label {
 }
 
 input {
-  border: solid green;
-  /*height: 40px;*/
   font-size: 36px;
 }
 
+.radio {
+  font-size: 1.5rem;
+  font-family: Arial;
+}
+
 ul.mess {
-  border: solid red;
-  background-color: #ccc;
-  opacity: .5;
-  padding: 0;
-  margin: 0;
   overflow: auto;
   padding-left: 10%;
   padding-right: 10%;
 }
 
 .mess > li {
-  /*overflow: auto;*/
-  border: solid purple;
   display: inline-block;
   width: 350px;
   height: 533px;
-  /*height: 8vh;*/
   text-align: center;
   padding: 0;
   margin: 0;
@@ -163,16 +154,12 @@ footer {
   overflow: auto;
   clear: both;
   text-align: center;
-  /*border: solid orange;*/
 }
 
-
 small {
-  /*float: right;*/
-  border: solid red;
   height: 5.5vh;
   color: white;
   float: right;
-  padding-top: 1.2vh;
+  padding-top: 1.5vh;
   margin-right: 10%;
 }

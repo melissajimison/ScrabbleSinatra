@@ -1,5 +1,7 @@
 require 'sinatra'
 require_relative 'libs/scorecode'
+require_relative 'libs/points'
+
 
 class Scrabble < Sinatra::Base
   # register Sinatra::Reloader
@@ -7,7 +9,6 @@ class Scrabble < Sinatra::Base
   get '/' do
     erb :index
   end
-
 
   get '/score' do
     erb :score
@@ -17,7 +18,6 @@ class Scrabble < Sinatra::Base
     @points = Scoring.score(params["word"])
     @by_letter = Scoring.letter_by_letter(params["word"])
     erb :score
-
   end
 
   get '/score_many' do
@@ -27,6 +27,7 @@ class Scrabble < Sinatra::Base
   post '/score_many' do
     @multiple_scores = Scoring.score_many(params["words"].split)
     @by_letter_many = Scoring.letter_by_letter_many(params["words"].split)
+    @score_weight = params["scoreweight"]
     erb :score_many
   end
 

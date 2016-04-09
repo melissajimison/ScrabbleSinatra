@@ -1,25 +1,40 @@
 <article class="mainmain">
 
-<form action="" method="post" accept-charset="utf-8">
-  <label for="user_word">Please enter your words separed by space</label>
-  <input type="text" name="words" value="" id="user_word">
+  <form action="" method="post" accept-charset="utf-8">
+    <label for="user_word">Please enter your words separed by space</label>
+    <input type="text" name="words" value="" id="user_word">
+    <br>
+    <label class="radio"><input type="radio" name="scoreweight" value="bonus">With bonus</label>
+    <label class="radio"><input type="radio" name="scoreweight" value="no-bonus">Plain word</label>
 
+    <input type="submit" value="Score!">
+  </form>
 
-  <input type="submit" value="Score!">
-</form>
+  <div class="params">
+    <%= params %>
+    <%= @score_weight %>
+  </div>
 
-
-<% if @multiple_scores %>
-<ul class="mess">
-  <% @multiple_scores.each do |pairs| %>
-  <li><h1> '<%= pairs[1] %>' = <%= pairs[0] %> points!! </h1>
-    <% if @by_letter_many %>
-      <% @by_letter_many[pairs[1]].each do |pair| %>
-      <h3><%= pair[0] %> = <%= pair[1] %> </h3>
+  <% if @multiple_scores %>
+    <% if @score_weight%>
+      <% if @score_weight == "bonus"%>
+        <% @multiple_scores =  @multiple_scores.each do |pairs| %>
+          <%  pairs[0] += ::BONUS if pairs[1].length == 7 %>
+        <% end %>
+      <% end %>
     <% end %>
-    <% end %>
-    </li>
+
+    <ul class="mess">
+      <% @multiple_scores.each do |pairs| %>
+        <li><h1> '<%= pairs[1] %>' = <%= pairs[0] %> points!! </h1>
+          <% if @by_letter_many %>
+            <% @by_letter_many[pairs[1]].each do |pair| %>
+              <h3><%= pair[0] %> = <%= pair[1] %> </h3>
+            <% end %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
   <% end %>
-</ul>
-<% end %>
+
 </article>
