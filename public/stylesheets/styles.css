@@ -123,8 +123,12 @@ input {
 .radio {
   font-size: 1.5rem;
   font-family: Arial;
+  background-color: #41F3F7;
+  padding: 1rem;
+  border-radius: 5%;
+  margin-right: .5rem;
 }
-
+/*41F3F7*/
 ul.mess {
   overflow: auto;
   padding-left: 10%;
