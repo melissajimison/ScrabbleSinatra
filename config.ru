@@ -1,4 +1,3 @@
-require './libs/scorecode'
-require './libs/points'
+require 'scrabble_sin'
 
 run Sinatra::Application
