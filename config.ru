@@ -1,3 +1,3 @@
-require 'scrabble_sin'
+require './scrabble_sin'
 
 run Sinatra::Application
