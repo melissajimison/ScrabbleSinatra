@@ -1,5 +1,4 @@
-$:.unshift File.expand_path("../", __FILE__)
-
+require 'views/layout.erb'
 require './scrabble_sin'
 
 run Sinatra::Application
