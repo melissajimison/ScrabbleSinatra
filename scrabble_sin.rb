@@ -5,7 +5,6 @@ require_relative 'libs/points'
 class Scrabble < Sinatra::Base
 
   get '/' do
-    send_file File.join(settings.public_folder, 'index.erb')
     erb :index
 end
 
