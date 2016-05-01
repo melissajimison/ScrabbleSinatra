@@ -6,7 +6,8 @@ class Scrabble < Sinatra::Base
 
   get '/' do
     send_file File.join(settings.public_folder, 'index.html')
-  end
+    erb :index
+end
 
   get '/score' do
     erb :score
