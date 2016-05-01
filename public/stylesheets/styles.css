@@ -14,6 +14,7 @@ body {
   background-image: repeating-linear-gradient( 45deg, #85D5E6 0px, #85D5E6 30px, #71C1D2 30px, #71C1D2 60px );
   padding: 0;
   margin: 0;
+  text-decoration-style: none;
 }
 
 header {
@@ -117,11 +118,12 @@ input {
 .radio {
   font-size: 1.5rem;
   font-family: Arial;
-  background-color: #03A6BC;
+  background-color: #2768B8;
   padding: 1rem;
   border-radius: 5%;
   margin-right: .5rem;
-  box-shadow: 4px 4px 4px;
+  box-shadow: 4px 4px 4px gray;
+  color: white;
 }
 
 ul.mess {
@@ -139,7 +141,7 @@ ul.mess {
   width: 350px;
   height: 583px;
   position: relative;
-  background-color: #80A2F3;
+  background-color: white;
   text-align: center;
   box-shadow: 10px 10px 7px gray;
 }
@@ -193,15 +195,39 @@ input[type=submit] {
   padding: 20px;
   margin-left: 4%;
   margin-right: 4%;
-
   display: inline-block;
   overflow: auto;
   width: 350px;
-  height: 583px;
+  height: 523px;
   position: relative;
-  background-color: #80A2F3;
+  background-color: white;
   text-align: center;
   box-shadow: 10px 10px 7px gray;
+  padding: 2rem;
+}
+
+.main-button {
+  display: inline-block;
+  margin-top: 12%;
+  margin-left: 9%;
+  width: 36%;
+  background-color: #2DA8AB;
+  box-shadow: 5px 5px 5px;
+}
+
+.short {
+  color: white;
+  padding: 5%;
+  padding-right: 24%;
+  padding-left: 24%;
+
+}
+
+.long {
+  color: white;
+  padding: 5%;
+  padding-right: 18%;
+  padding-left: 18%;
 }
 /*********************END****************/
 
