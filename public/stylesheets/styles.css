@@ -63,7 +63,7 @@ nav a {
 }
 
 nav li:hover {
-  background-color: #3B5F66;
+  background-color: rgb(6,104,165);
 }
 
 nav a.active {
@@ -117,10 +117,11 @@ input {
 .radio {
   font-size: 1.5rem;
   font-family: Arial;
-  background-color: #41F3F7;
+  background-color: #03A6BC;
   padding: 1rem;
   border-radius: 5%;
   margin-right: .5rem;
+  box-shadow: 4px 4px 4px;
 }
 
 ul.mess {
@@ -138,7 +139,9 @@ ul.mess {
   width: 350px;
   height: 583px;
   position: relative;
-  background-color: #7FFF00;
+  background-color: #80A2F3;
+  text-align: center;
+  box-shadow: 10px 10px 7px gray;
 }
 
 .line {
@@ -148,9 +151,11 @@ ul.mess {
   padding: 0;
   width: 180px;
   list-style: none;
+  border: gray;
 }
 
-.tile, .equal, .score { float: left;
+.tile, .equal, .score {
+  float: left;
   position: relative;
   width: 58px;
   height: 58px;
@@ -158,7 +163,7 @@ ul.mess {
 
 .tile {
   padding: 1rem;
-  background-image: url("/images/tile2.jpg");
+  background-image: url("/images/tile.jpg");
   border-radius: 25%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -170,7 +175,34 @@ ul.mess {
   font-size: 2rem;
 }
 
+input[type=submit] {
+  background-color: rgb(6,104,165);
+  border-radius: 5px;
+  color:white;
+  cursor:pointer;
+  /*display: inline-block;*/
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-left: 10px;
+  padding:15px 25px 15px 25px;
+}
 
+.one-word {
+  background-color: white;
+  padding: 20px;
+  margin-left: 4%;
+  margin-right: 4%;
+
+  display: inline-block;
+  overflow: auto;
+  width: 350px;
+  height: 583px;
+  position: relative;
+  background-color: #80A2F3;
+  text-align: center;
+  box-shadow: 10px 10px 7px gray;
+}
 /*********************END****************/
 
 

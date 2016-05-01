@@ -1,28 +1,27 @@
 <article class="mainmain">
 
+  <form action="" method="post" accept-charset="utf-8">
+    <label for="user_word">Your Word</label>
+    <input type="text" maxlength="7" name="word" value="" id="user_word">
 
-<form action="" method="post" accept-charset="utf-8">
-  <label for="user_word">Your Word</label>
-  <input type="text" maxlength="7" name="word" value="" id="user_word">
+    <input type="submit" value="Score!">
+  </form>
 
-  <input type="submit" value="Score!">
-</form>
-
-
-<% if @points %>
+  <% if @points %>
   <div class="cont">
 
     <h1> '<%= params["word"] %>' = <%= @points %> points!!  </h1>
-    <% if @by_letter %>
-      <%= erb :points %>
+    <% if params["word"].length == 7 %>
+    <h1>  <%= BONUS %> BONUS for 7 letters word total points <%= @points + BONUS %> </h1>
     <% end %>
 
-    <% if params["word"].length == 7 %>
-      <h1>  <%= BONUS %> BONUS for 7 letters word total points <%= @points + BONUS %> </h1>
+    <div class="one-word">
+    <% if @by_letter %>
+      <%= erb :points %>
+    </div>
     <% end %>
 
   </div>
-<% end %>
-
+  <% end %>
 
 </article>
