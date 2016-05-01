@@ -6,7 +6,7 @@ class Scrabble < Sinatra::Base
   # register Sinatra::Reloader
 
   get '/' do
-    erb :index
+    File.read(File.join('public', 'index.html'))
   end
 
   get '/score' do
