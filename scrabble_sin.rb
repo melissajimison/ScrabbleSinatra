@@ -6,7 +6,7 @@ class Scrabble < Sinatra::Base
   # register Sinatra::Reloader
 
   get '/' do
-    File.read(File.join('public', 'index.erb'))
+    File.read(File.join('public/stylesheets', 'index.erb'))
     erb :index
   end
 
