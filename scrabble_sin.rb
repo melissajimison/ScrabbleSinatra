@@ -34,9 +34,4 @@ class Scrabble < Sinatra::Base
     erb :score_many
   end
 
-  get '/styles.css' do
-  scss :styles
-  end
-
-  run!
 end
